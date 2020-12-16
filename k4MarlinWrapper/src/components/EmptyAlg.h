@@ -4,6 +4,7 @@
 
 #include <edm4hep/MCParticle.h>
 #include <edm4hep/MCParticleCollection.h>
+#include <edm4hep/ReconstructedParticleCollection.h>
 
 
 #include "GaudiAlg/GaudiAlgorithm.h"

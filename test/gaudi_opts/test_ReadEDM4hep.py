@@ -9,8 +9,11 @@ evtsvc = k4DataSvc('EventDataSvc')  # this has to be called this
 evtsvc.input = '$k4MarlinWrapper_tests_DIR/inputFiles/' + theFile
 
 from Configurables import PodioInput
-inp = PodioInput("InputReader")
-inp.collections = ["Particle"]
+inp = PodioInput('InputReader')
+inp.collections = [
+    'Particle',
+    'ReconstructedParticles',
+]
 inp.OutputLevel = DEBUG
 algList.append(inp)
 
