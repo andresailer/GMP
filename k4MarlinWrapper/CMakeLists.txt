@@ -22,37 +22,23 @@
 gaudi_install(PYTHON)
 gaudi_install(SCRIPTS)
 
-gaudi_add_module(k4MarlinWrapperPlugins
+gaudi_add_module(k4MarlinWrapper
   SOURCES
     src/components/LcioEventAlgo.cpp
+    src/components/MarlinProcessorWrapper.cpp
+    src/components/EmptyAlg.cpp
   LINK
     GaudiAlgLib
     GaudiKernel
     ROOT::Core
+    k4FWCore::k4FWCore
+    EDM4HEP::edm4hep
     ${LCIO_LIBRARIES}
     ${Marlin_LIBRARIES}
 )
 
-target_include_directories(k4MarlinWrapperPlugins PUBLIC
-  k4MarlinWrapper/
-  ${LCIO_INCLUDE_DIRS}
-  ${Marlin_INCLUDE_DIRS}
-  /home/plfernan/workspace/json/install/include
-)
-
-gaudi_add_module(MarlinWrapper
-  SOURCES
-    src/components/MarlinProcessorWrapper.cpp
-  LINK
-    GaudiAlgLib
-    GaudiKernel
-    ${LCIO_LIBRARIES}
-    ${Marlin_LIBRARIES}
-)
-
-target_include_directories(MarlinWrapper PUBLIC
+target_include_directories(k4MarlinWrapper PUBLIC
   k4MarlinWrapper/
   ${Marlin_INCLUDE_DIRS}
   ${LCIO_INCLUDE_DIRS}
-  /home/plfernan/workspace/json/install/include
 )
