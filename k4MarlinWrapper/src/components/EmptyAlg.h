@@ -30,5 +30,5 @@ public:
 private:
   // member variable 
   int m_member = 0; 
-  DataHandle<edm4hep::MCParticleCollection> mcps_handle {"Particle", Gaudi::DataHandle::Reader, this};
+
 };

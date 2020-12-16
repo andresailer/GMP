@@ -5,7 +5,7 @@ from Configurables import LcioEvent, EventDataSvc, k4DataSvc, MyEmptyAlg
 algList = []
 
 theFile= 'edminput.root'
-evtsvc = k4DataSvc('EventDataSvc')
+evtsvc = k4DataSvc('EventDataSvc')  # this has to be called this
 evtsvc.input = '$k4MarlinWrapper_tests_DIR/inputFiles/' + theFile
 
 from Configurables import PodioInput
