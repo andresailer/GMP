@@ -50,6 +50,9 @@ find_package(LCIO REQUIRED)
 find_package(Marlin REQUIRED)
 find_package(Gaudi REQUIRED)
 
+find_package(k4FWCore REQUIRED)
+find_package(EDM4HEP REQUIRED)
+
 include(CTest)
 
 add_subdirectory(k4MarlinWrapper)

@@ -28,4 +28,11 @@ if (BASH_PROGRAM)
       ENVIRONMENT k4MarlinWrapper_tests_DIR=${CMAKE_CURRENT_SOURCE_DIR}
       PASS_REGULAR_EXPRESSION "INFO Application Manager Terminated successfully")
 
+  # Test edm4hepReading
+  add_test( test_readEdm4hep ../run gaudirun.py $k4MarlinWrapper_tests_DIR/gaudi_opts/test_ReadEDM4hep.py )
+  set_tests_properties ( test_readEdm4hep
+    PROPERTIES
+      ENVIRONMENT k4MarlinWrapper_tests_DIR=${CMAKE_CURRENT_SOURCE_DIR}
+      PASS_REGULAR_EXPRESSION "INFO Application Manager Terminated successfully")
+
 endif(BASH_PROGRAM)
